@@ -1,0 +1,29 @@
+- sensor:
+  - unique_id: sidebar
+    state: template
+    attributes:
+      clock: >
+        {% set hours = now().strftime('%H') %}
+        {% set minutes = now().strftime('%M') %}
+        <div class="clock">
+          <div class="time">
+            {{ hours }}<span class="time-colon">:</span>{{ minutes }}
+          </div>
+          <div class="date">
+            {{ now().strftime('%A, %B %d') }}
+          </div>
+        </div>
+      info: >
+        <div class="info">
+          <div class="persons">
+            <div class="person"></div>
+            <div class="person"></div>
+            <div class="person"></div>
+            <div class="person"></div>
+          </div>
+
+          <div class="utilities">
+            <div class="utility">Electricity</div>
+            <div class="utility">Waste Collection</div>
+          </div>
+        </div>

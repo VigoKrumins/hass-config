@@ -1,0 +1,10 @@
+#####
+# Logger
+# https://www.home-assistant.io/integrations/logger/
+#####
+
+logger:
+  default: warning
+  logs:
+    homeassistant.components.websocket_api: fatal
+    homeassistant.setup: error

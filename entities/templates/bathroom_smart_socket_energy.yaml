@@ -1,0 +1,11 @@
+- sensor:
+  - name: "Bathroom Smart Socket Energy"
+    unique_id: bathroom_smart_socket_energy
+    unit_of_measurement: kWh
+    state_class: total_increasing
+    device_class: energy
+    icon: mdi:lightning-bolt
+    state: >
+      {{ states('sensor.bathroom_smart_socket_power') | float / 1000 }}
+    attributes:
+      last_reset: "2023-06-05T12:00:00+00:00"

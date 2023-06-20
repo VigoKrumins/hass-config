@@ -1,0 +1,7 @@
+dishwasher_pods:
+  name: "Dishwasher Pods"
+  icon: "mdi:dishwasher-alert"
+  initial: 30
+  minimum: 0
+  step: 1
+  restore: true

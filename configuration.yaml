@@ -1,0 +1,23 @@
+homeassistant:
+  name: Home
+  latitude: !secret zone_home_latitude
+  longitude: !secret zone_home_longitude
+  elevation: !secret zone_home_elevation
+  unit_system: metric
+  temperature_unit: C
+  time_zone: Europe/Berlin
+  language: en
+  country: DE
+  currency: EUR
+  customize: !include customize.yaml
+  customize_domain:
+    automation:
+      initial_state: true
+  packages: !include_dir_named integrations
+  allowlist_external_dirs:
+    - /config
+
+
+# automation: !include automations.yaml
+# script: !include scripts.yaml
+# scene: !include scenes.yaml

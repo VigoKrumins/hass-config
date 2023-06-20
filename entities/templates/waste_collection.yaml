@@ -1,0 +1,21 @@
+- sensor:
+  - unique_id: waste_collection
+    icon: mdi:trash-can
+    state: >
+      {% set t = now() %}
+      {% set midnight = today_at() %}
+      {% set event = state_attr('calendar.waste_collection', 'start_time') | as_datetime | as_local %}
+      {% set delta = event - midnight %}
+      {% if delta.days == 0 %}
+        Today
+      {% elif delta.days == 1 %}
+        Tomorrow
+      {% elif delta.days == 2 %}
+        After Tomorrow
+      {% else %}
+        In {{ delta.days }} days
+      {% endif %}
+    attributes:
+      friendly_name: "Waste Collection"
+      days: >-
+        {{ ((state_attr('calendar.waste_collection', 'start_time') | as_timestamp - today_at('00:00') | as_timestamp) / 86400) | int }}

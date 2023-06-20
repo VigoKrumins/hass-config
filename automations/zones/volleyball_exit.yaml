@@ -1,0 +1,15 @@
+id: '1686576926123'
+alias: Notify when Jens leaves Volleyball
+description: ''
+trigger:
+- platform: zone
+  entity_id: person.jens
+  zone: zone.volleyball
+  event: leave
+condition: []
+action:
+- service: notify.parents
+  data:
+    title: "\U0001F3D0 Volleyball"
+    message: Jens has left the Volleyball.
+mode: single

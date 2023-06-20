@@ -1,0 +1,55 @@
+id: 1611087a-06a6-11ee-be56-0242ac120002
+alias: "Hallway Front Door Notifications"
+
+trigger:
+  - platform: state
+    entity_id: binary_sensor.hallway_front_door
+    from: "off"
+    to: "on"
+    id: opened
+  - platform: state
+    entity_id: binary_sensor.hallway_front_door
+    from: "on"
+    to: "off"
+    id: closed
+  - platform: state
+    entity_id: binary_sensor.hallway_front_door
+    from: "off"
+    to: "on"
+    for: 00:05:00
+    id: left_opened
+
+condition: []
+
+action:
+  - choose:
+    - conditions:
+      - condition: trigger
+        id: opened
+      sequence:
+        - service: notify.parents
+          data:
+            title: "Home"
+            message: "Front Door was opened."
+    - conditions:
+      - condition: trigger
+        id: closed
+      sequence:
+        - service: notify.parents
+          data:
+            title: "Home"
+            message: "Front Door was closed."
+    - conditions:
+      - condition: trigger
+        id: left_opened
+      sequence:
+        - service: notify.parents
+          data:
+            title: "Home"
+            data:
+              push:
+                sound:
+                  name: default
+                  critical: 1
+                  volume: 0.5
+            message: "Front Door has been left open."

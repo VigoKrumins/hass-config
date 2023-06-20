@@ -1,0 +1,6 @@
+#####
+# Group
+# https://www.home-assistant.io/components/group/
+#####
+
+group: !include_dir_merge_named ../entites/groups

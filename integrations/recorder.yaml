@@ -1,0 +1,10 @@
+#####
+# Recorder
+# https://www.home-assistant.io/integrations/recorder/
+#####
+
+recorder:
+  exclude:
+    entities:
+      - sensor.icloud3_event_log
+      - sensor.icloud3_wazehist_track

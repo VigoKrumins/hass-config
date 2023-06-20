@@ -1,0 +1,6 @@
+#####
+# Network Configuration
+# https://www.home-assistant.io/integrations/network/
+#####
+
+network:

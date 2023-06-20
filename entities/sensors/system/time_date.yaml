@@ -1,0 +1,9 @@
+#####
+# Time & Date
+# https://www.home-assistant.io/integrations/time_date/
+#####
+
+platform: time_date
+display_options:
+  - time
+  - date

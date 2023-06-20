@@ -1,0 +1,406 @@
+{
+    "config": {
+        "abort": {
+            "abort_login": "Unable to complete the login process.",
+            "already_configured": "Device already configured.",
+            "not_found": "Device not found.",
+            "not_velop": "Not a Velop device.",
+            "single_instance_allowed": "Integration already configured."
+        },
+        "error": {
+            "connection_error": "Connection error.",
+            "invalid_input": "Invalid action in request.",
+            "login_error": "Unable to login.  Please check the username and password.",
+            "login_bad_response": "Bad response on login.  Check that the primary node is correct.",
+            "node_not_primary": "The primary node in the Velop mesh should be specified.",
+            "node_timeout": "Timeout whilst contacting the node."
+        },
+        "flow_title": "{name}",
+        "step": {
+            "device_trackers": {
+                "data": {
+                    "tracked": "Available devices"
+                },
+                "description": "Select the devices you would like to use for presence tracking",
+                "title": "Linksys Velop"
+            },
+            "timers": {
+                "data": {
+                    "api_request_timeout": "Time to wait for a response from the Mesh (in seconds)",
+                    "consider_home": "Time to wait before switching to not_home (in seconds)",
+                    "scan_interval": "Scan interval (in seconds)",
+                    "scan_interval_device_tracker": "Scan interval for device trackers (in seconds)"
+                },
+                "description": "Set the various timers for the integration",
+                "title": "Linksys Velop"
+            },
+            "user": {
+                "data": {
+                    "node": "Primary node address",
+                    "password": "Password"
+                },
+                "description": "Enter the details to connect to the Linksys Velop mesh",
+                "title": "Linksys Velop"
+            }
+        },
+        "title": "Linksys Velop"
+    },
+    "device_automation": {
+        "trigger_type": {
+            "logging_stopped": "Logging stopped",
+            "new_device": "New device found",
+            "new_node": "New node found",
+            "new_primary_node": "Primary node changed"
+        }
+    },
+    "entity": {
+        "binary_sensor": {
+            "blocked_times": {
+                "name": "Blocked Times",
+                "state": {
+                    "off": "No",
+                    "on": "Yes"
+                }
+            },
+            "channel_scanning": {
+                "name": "Channel Scanning"
+            },
+            "client_steering": {
+                "name": "Client Steering"
+            },
+            "dhcp_server": {
+                "name": "DHCP Server"
+            },
+            "express_forwarding": {
+                "name": "Express Forwarding"
+            },
+            "guest_network": {
+                "name": "Guest Network",
+                "state": {
+                    "off": "No",
+                    "on": "Yes"
+                }
+            },
+            "homekit_paired": {
+                "name": "HomeKit Integration Paired",
+                "state": {
+                    "off": "No",
+                    "on": "Yes"
+                }
+            },
+            "mac_filtering": {
+                "name": "MAC Filtering"
+            },
+            "node_steering": {
+                "name": "Node Steering"
+            },
+            "reserved_ip": {
+                "name": "Reserved IP",
+                "state": {
+                    "off": "No",
+                    "on": "Yes"
+                }
+            },
+            "sip": {
+                "name": "SIP"
+            },
+            "speedtest_status": {
+                "name": "Speedtest Status"
+            },
+            "status": {
+                "name": "Status"
+            },
+            "update_available": {
+                "name": "Update Available"
+            },
+            "upnp": {
+                "name": "UPnP"
+            },
+            "upnp_allow_change_settings": {
+                "name": "UPnP Allow Users to Configure"
+            },
+            "upnp_allow_disable_internet": {
+                "name": "UPnP Allow Users to Disable Internet"
+            },
+            "wan_status": {
+                "name": "WAN Status"
+            }
+        },
+        "button": {
+            "channel_scan": {
+                "name": "Start Channel Scan"
+            },
+            "check_for_updates": {
+                "name": "Check for Updates"
+            },
+            "delete": {
+                "name": "Delete"
+            },
+            "reboot": {
+                "name": "Reboot"
+            },
+            "speedtest": {
+                "name": "Start Speedtest"
+            }
+        },
+        "select": {
+            "mesh_devices": {
+                "name": "Devices"
+            }
+        },
+        "sensor": {
+            "available_storage": {
+                "name": "Available Storage"
+            },
+            "backhaul_connection_type": {
+                "name": "Backhaul Type",
+                "state": {
+                    "unknown": "Unknown",
+                    "wired": "Wired",
+                    "wireless": "Wireless"
+                }
+            },
+            "backhaul_friendly_signal_strength": {
+                "name": "Backhaul Friendly Signal Strength",
+                "state": {
+                    "excellent": "Excellent",
+                    "fair": "Fair",
+                    "good": "Good",
+                    "weak": "Weak"
+                }
+            },
+            "backhaul_last_checked": {
+                "name": "Backhaul Last Checked"
+            },
+            "backhaul_signal_strength": {
+                "name": "Backhaul Signal Strength"
+            },
+            "backhaul_speed": {
+                "name": "Backhaul Speed"
+            },
+            "blocked_sites": {
+                "name": "Blocked Sites"
+            },
+            "connected_devices": {
+                "name": "Connected Devices"
+            },
+            "description": {
+                "name": "Description"
+            },
+            "dhcp_reservations": {
+                "name": "DHCP Reservations"
+            },
+            "download_bandwidth": {
+                "name": "Speedtest Download Bandwidth"
+            },
+            "friendly_signal_strength": {
+                "name": "Friendly Signal Strength",
+                "state": {
+                    "excellent": "Excellent",
+                    "fair": "Fair",
+                    "good": "Good",
+                    "weak": "Weak"
+                }
+            },
+            "guest_devices": {
+                "name": "Guest Devices"
+            },
+            "id": {
+                "name": "ID"
+            },
+            "image": {
+                "name": "Image"
+            },
+            "ip": {
+                "name": "IP"
+            },
+            "ipv6": {
+                "name": "IPv6"
+            },
+            "last_update_check": {
+                "name": "Last Update Check"
+            },
+            "mac": {
+                "name": "MAC"
+            },
+            "manufacturer": {
+                "name": "Manufacturer"
+            },
+            "model": {
+                "name": "Model"
+            },
+            "name": {
+                "name": "Name"
+            },
+            "node_type": {
+                "name": "Type",
+                "state": {
+                    "primary": "Primary",
+                    "secondary": "Secondary"
+                }
+            },
+            "offline_devices": {
+                "name": "Offline Devices"
+            },
+            "online_devices": {
+                "name": "Online Devices"
+            },
+            "operating_system": {
+                "name": "Operating System"
+            },
+            "parent_name": {
+                "name": "Parent"
+            },
+            "serial": {
+                "name": "Serial"
+            },
+            "signal_strength": {
+                "name": "Signal Strength"
+            },
+            "speedtest_last_run": {
+                "name": "Speedtest Last Run"
+            },
+            "speedtest_latency": {
+                "name": "Speedtest Latency"
+            },
+            "speedtest_progress": {
+                "name": "Speedtest Progress"
+            },
+            "speedtest_result": {
+                "name": "Speedtest Result"
+            },
+            "ui_type": {
+                "name": "UI Type"
+            },
+            "upload_bandwidth": {
+                "name": "Speedtest Upload Bandwidth"
+            },
+            "wan_ip": {
+                "name": "WAN IP"
+            }
+        },
+        "switch": {
+            "guest_wifi": {
+                "name": "Guest Wi-Fi"
+            },
+            "homekit": {
+                "name": "HomeKit Integration"
+            },
+            "internet_access": {
+                "name": "Internet Access"
+            },
+            "parental_control": {
+                "name": "Parental Control"
+            },
+            "wps": {
+                "name": "WPS"
+            }
+        },
+        "update": {
+            "update": {
+                "name": "Update"
+            }
+        }
+    },
+    "issues": {
+        "missing_device_tracker": {
+            "title": "{device_name} is missing",
+            "fix_flow": {
+                "step": {
+                    "confirm_removal": {
+                        "title": "Remove the device tracker",
+                        "description": "{device_name} is no longer on the Mesh or it's unique ID has changed. Click submit to remove the device tracker from Home Assistant."
+                    }
+                }
+            }
+        },
+        "missing_ui_device": {
+            "title": "{device_name} is missing",
+            "fix_flow": {
+                "step": {
+                    "confirm_removal": {
+                        "title": "Remove the device",
+                        "description": "{device_name} is no longer on the Mesh or it's unique ID has changed. Click submit to remove the device from Home Assistant."
+                    }
+                }
+            }
+        }
+    },
+    "options": {
+        "step": {
+            "advanced_options": {
+                "data": {
+                    "node_images": "Velop image path",
+                    "select_temp_ui_device": "Use a temporary device for select entity details"
+                },
+                "data_description": {
+                    "node_images": "Path to the velop images, e.g. /local/velop_images.\nUse * to remove the value.",
+                    "select_temp_ui_device": "This option will stop writing the selected device details to the attributes and use a temporary device instead."
+                },
+                "description": "Options below are considered advanced for various reasons.\nConfigure them carefully.",
+                "title": "Linksys Velop"
+            },
+            "device_ui": {
+                "data": {
+                    "ui_devices": "Available devices"
+                },
+                "description": "Select the devices that you'd like to have created in the UI.",
+                "title": "Linksys Velop"
+            },
+            "device_trackers": {
+                "data": {
+                    "tracked": "Available devices"
+                },
+                "description": "Select the devices you would like to use for presence tracking.",
+                "title": "Linksys Velop"
+            },
+            "init": {
+                "menu_options": {
+                    "advanced_options": "Advanced Options",
+                    "device_ui": "UI Devices",
+                    "device_trackers": "Device Trackers",
+                    "logging": "Logging",
+                    "timers": "Timers"
+                },
+                "title": "Linksys Velop"
+            },
+            "logging": {
+                "data": {
+                    "logging_jnap_response": "Include query responses in debug logs",
+                    "logging_mode": "Logging mode",
+                    "logging_options": "Logging options",
+                    "logging_serial": "Include the serial number in debug logs"
+                },
+                "data_description": {
+                    "logging_mode": "The mode setting has no effect if logging for the integration is defined in configuration.yaml"
+                },
+                "description": "Configure logging details and state.{logging_mode_warning}",
+                "title": "Linksys Velop"
+            },
+            "timers": {
+                "data": {
+                    "api_request_timeout": "Time to wait for a response from the Mesh (in seconds)",
+                    "consider_home": "Time to wait before switching to not_home (in seconds)",
+                    "scan_interval": "Scan interval (in seconds)",
+                    "scan_interval_device_tracker": "Scan interval for device trackers (in seconds)"
+                },
+                "description": "Set the various timers for the integration.",
+                "title": "Linksys Velop"
+            }
+        }
+    },
+    "selector": {
+        "logging_options": {
+            "options": {
+                "include_serial": "Include serial number",
+                "include_query_response": "Include query responses"
+            }
+        },
+        "logging_modes": {
+            "options": {
+                "off": "Off",
+                "single": "Single poll"
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+# Automations
+automation.bedroom_ceiling_light_switch:
+  icon: "mdi:gesture-tap-button"
+
+automation.bedroom_left_bedside_switch:
+  icon: "mdi:gesture-tap-button"
+
+automation.bedroom_right_bedside_switch:
+  icon: "mdi:gesture-tap-button"
+
+automation.hallway_front_door_notifications:
+  icon: "mdi:door-open"
+
+automation.kids_room_shortcut_button:
+  icon: "mdi:gesture-tap-button"
+
+automation.kitchen_lights_switch:
+  icon: "mdi:gesture-tap-button"
+
+automation.living_room_shortcut_button:
+  icon: "mdi:gesture-tap-button"
+
+automation.turn_off_tv_lights_when_tv_stops_playing:
+  icon: "mdi:television-off"
+
+automation.turn_on_tv_lights_when_tv_is_playing:
+  icon: "mdi:television"
+
+# Device Tracker
+device_tracker.starship:
+  entity_picture: /local/images/tesla-m3p-white.png

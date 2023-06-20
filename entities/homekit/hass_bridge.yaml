@@ -1,0 +1,72 @@
+name: HASS Bridge
+filter:
+  include_entities:
+    # BATHROOM
+    - switch.bathroom_smart_socket
+
+    # BEDROOM
+    - climate.bedroom_thermostat
+    - light.bedroom_left_bedside_lamp
+    - light.bedroom_right_bedside_lamp
+
+    # HALLWAY
+    - binary_sensor.hallway_front_door
+    - sensor.hallway_humidity
+    - sensor.hallway_temperature
+
+    # KIDS ROOM
+    - climate.kids_room_thermostat
+    - light.kids_room_desk_lamp
+    - light.kids_room_couch_lamp
+
+    # KITCHEN
+    - climate.kitchen_thermostat
+    - light.kitchen_counter_lights
+    - switch.kitchen_water_kettle
+
+    # LIVING ROOM
+    - climate.living_room_thermostat
+    - light.living_room_left_desk_lamp
+    - light.living_room_right_desk_lamp
+    - light.living_room_standing_lamp
+    - light.living_room_led_bar
+    - light.living_room_tv_lights
+
+entity_config:
+  # BATHROOM
+
+  # BEDROOM
+  climate.bedroom_thermostat:
+    name: Bedroom Thermostat
+
+  light.bedroom_left_bedside_lamp:
+    name: Bedroom Left Bedside Lamp
+
+  light.bedroom_right_bedside_lamp:
+    name: Bedroom Right Bedside Lamp
+
+  # HALLWAY
+
+  # KIDS ROOM
+  climate.kids_room_thermostat:
+    name: Kids Room Thermostat
+
+  light.kids_room_desk_lamp:
+    name: Kids Room Desk Lamp
+
+  # KITCHEN
+  climate.kitchen_thermostat:
+    name: Kitchen Thermostat
+
+  light.kitchen_counter_lights:
+    name: Kitchen Counter Lights
+
+  # LIVING ROOM
+  climate.living_room_thermostat:
+    name: Living Room Thermostat
+
+  light.living_room_left_desk_lamp:
+    name: Living Room Left Desk Lamp
+
+  light.living_room_right_desk_lamp:
+    name: Living Room Right Desk Lamp

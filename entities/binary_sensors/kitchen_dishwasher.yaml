@@ -1,0 +1,7 @@
+platform: template
+sensors:
+  kitchen_dishwasher:
+    friendly_name: "Kitchen Dishwasher"
+    icon_template: "mdi:dishwasher"
+    value_template: >-
+      {{ states('sensor.kitchen_dishwasher_plug_power') | float(0) > 5 }}

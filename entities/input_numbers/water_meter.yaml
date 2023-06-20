@@ -1,0 +1,7 @@
+water_meter:
+  name: Water Meter Reading
+  min: 0
+  max: 99999
+  step: 0.001
+  unit_of_measurement: m/3
+  mode: box

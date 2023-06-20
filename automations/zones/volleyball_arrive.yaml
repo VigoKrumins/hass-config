@@ -1,0 +1,15 @@
+id: '1686576926556'
+alias: Notify when Jens arrive at Volleyball
+description: ''
+trigger:
+- platform: zone
+  entity_id: person.jens
+  zone: zone.volleyball
+  event: enter
+condition: []
+action:
+- service: notify.parents
+  data:
+    title: "\U0001F3D0 Volleyball"
+    message: Jens has arrived at Volleyball.
+mode: single

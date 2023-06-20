@@ -1,0 +1,17 @@
+id: 436128b4-06a6-11ee-be56-0242ac120002
+alias: Living Room Shortcut Button
+description: ''
+
+use_blueprint:
+  path: EPMatt/ikea_e1812.yaml
+  input:
+    integration: Zigbee2MQTT
+    controller_entity: sensor.living_room_shortcut_button_action
+    helper_last_controller_event: input_text.living_room_shortcut_button
+    action_button_short:
+    - service: light.toggle
+      data: {}
+      target:
+        device_id:
+        - c9d4c69c32942c0267114791a03d4068
+        - 5e138850a50d603210f76cf09ff41ed4

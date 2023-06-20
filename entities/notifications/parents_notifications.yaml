@@ -1,0 +1,4 @@
+platform: group
+name: "Parents"
+services:
+  - service: mobile_app_vigo_iphone

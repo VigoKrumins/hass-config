@@ -1,0 +1,4 @@
+platform: meteoalarm
+name: Meteoalarm
+country: !secret meteoalarm_country
+province: !secret meteoalarm_province

@@ -1,0 +1,10 @@
+.cloud/
+.storage/
+*.db
+*.db-shm
+*.db-wal
+*.log
+*.log.*
+*.db
+secrets.yaml
+image/

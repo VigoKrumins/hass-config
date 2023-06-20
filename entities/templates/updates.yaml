@@ -1,0 +1,11 @@
+- sensor:
+  - unique_id: updates
+    state: >
+      {{ this.attributes.values() | sum }}
+    attributes:
+      home_assistant: >
+        {% set installed = states('sensor.current_version') %}
+        {% set latest = states('sensor.docker_hub') %}
+        {{ iif(version(latest) > version(installed) and '.' in installed and '.' in latest, 1, 0) }}
+      update_entities: >
+        {{ states.update | selectattr('state','eq','on') | list | count }}

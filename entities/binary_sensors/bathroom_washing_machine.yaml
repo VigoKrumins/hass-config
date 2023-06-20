@@ -1,0 +1,7 @@
+platform: template
+sensors:
+  bathroom_washing_machine:
+    friendly_name: "Bathroom Washing Machine"
+    icon_template: "mdi:washing-machine"
+    value_template: >-
+      {{ states('sensor.bathroom_smart_socket_power') | float(0) > 5 }}

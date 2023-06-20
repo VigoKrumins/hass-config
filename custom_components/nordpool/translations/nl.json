@@ -1,0 +1,25 @@
+{
+    "config": {
+        "title": "Nordpool",
+        "step": {
+            "user": {
+                "title": "Nordpool Sensor",
+                "description": "Configureer een Nordpool sensor",
+                "data": {
+                    "region": "Regio",
+                    "currency": "Munteenheid",
+                    "VAT": "Inclusief BTW",
+                    "precision": "Decimalen afronden",
+                    "low_price_cutoff": "Precentage lage prijs",
+                    "price_in_cents": "Prijs in centen",
+                    "price_type": "Energie schaal",
+                    "additional_costs": "Template voor extra kosten"
+                }
+            }
+        },
+        "error": {
+            "name_exists": "Naam bestaat al",
+            "invalid_template": "Het template is ongeldig, zie https://github.com/custom-components/nordpool"
+        }
+    }
+}

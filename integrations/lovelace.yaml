@@ -1,0 +1,18 @@
+#####
+# Dashboards
+# https://www.home-assistant.io/dashboards/
+#####
+
+lovelace:
+  mode: yaml
+  resources:
+    - type: module
+      url: /hacsfiles/button-card/button-card.js?v=3.5.0
+    - type: module
+      url: /hacsfiles/lovelace-layout-card/layout-card.js?v=2.4.4
+    - type: module
+      url: /hacsfiles/lovelace-mushroom/mushroom.js?v=2.7.1
+    - type: module
+      url: /local/custom_cards/icloud3-event-log-card.js?v=3.0.8
+    - type: module
+      url: /local/js/marked.min.js?v=4.3.0

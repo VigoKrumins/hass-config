@@ -1,0 +1,30 @@
+- id: '1686576758103'
+  alias: Notify when Jens arrive at Volleyball
+  description: ''
+  trigger:
+  - platform: geo_location
+    source: device_tracker.jens
+    zone: zone.volleyball
+    event: enter
+  condition: []
+  action:
+  - service: notify.parents
+    data:
+      title: "\U0001F3D0 Volleyball"
+      message: Jens has arrived at Volleyball.
+  mode: single
+- id: '1686576926556'
+  alias: New Automation
+  description: ''
+  trigger:
+  - platform: zone
+    entity_id: person.jens
+    zone: zone.volleyball
+    event: enter
+  condition: []
+  action:
+  - service: notify.parents
+    data:
+      title: Volleyball
+      message: Jens has arrive at Volleyball.
+  mode: single

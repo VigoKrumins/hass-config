@@ -1,0 +1,20 @@
+id: 3699b038-06a6-11ee-be56-0242ac120002
+alias: Bedroom Right Bedside Switch
+description: ''
+
+use_blueprint:
+  path: EPMatt/ikea_e1743.yaml
+  input:
+    integration: Zigbee2MQTT
+    controller_entity: sensor.bedroom_right_bedside_switch_action
+    helper_last_controller_event: input_text.bedroom_right_bedside_switch
+    action_button_up_short:
+    - service: light.turn_on
+      data: {}
+      target:
+        device_id: e85627807df1e28343097ddab1d1c8f8
+    action_button_down_short:
+    - service: light.turn_off
+      data: {}
+      target:
+        device_id: e85627807df1e28343097ddab1d1c8f8

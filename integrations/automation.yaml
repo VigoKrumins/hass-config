@@ -1,0 +1,6 @@
+#####
+# Automation
+# https://www.home-assistant.io/docs/automation/yaml/
+#####
+
+automation: !include_dir_list ../automations

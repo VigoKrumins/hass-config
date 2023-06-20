@@ -1,0 +1,6 @@
+#####
+# RESTful
+# https://www.home-assistant.io/integrations/rest/
+#####
+
+rest: !include_dir_merge_list ../entities/rest
