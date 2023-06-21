@@ -1,18 +1,24 @@
 # Home Assistant Configuration
 
-⚠️ THIS IS STILL A WORK IN PROGRESS ⚠️
+![stars](https://img.shields.io/github/stars/VigoKrumins/hass-config.svg)
 
-As a lot of people on [Home Assistant's sub-reddit](https://www.reddit.com/r/homeassistant/comments/13xdgg2/wip_building_new_dashboard_from_scratch_w_minimal/) asked to share the configuration, then this is it! I will try to keep the configuration up-to-date.
+**⚠️ PLEASE NOTE: THIS CONFIGURATION IS STILL A WORK IN PROGRESS ⚠️**
 
-This is my version of [Home Assistant](https://www.home-assistant.io) configuration. In home server, everything is running on a 2012 Mac mini which has [Proxmox VE 7.4](https://www.proxmox.com/en/proxmox-ve) installed as main OS to manage Virtual Machines and Linux Container. Home Assistant is running as a [Home Assistant Container](https://www.home-assistant.io/installation/linux#install-home-assistant-container) in a [Linux Container](https://pve.proxmox.com/wiki/Linux_Container).
+*I wanted to share my current setup with you, but please be aware that it's still a work in progress. I'm continuously refining and updating it to ensure optimal performance and functionality. Feel free to use it as a reference, but keep in mind that some adjustments may be necessary based on your specific requirements and devices.*
 
-Mainly, the Home Assistant is used on a wall-mounted [Samsung Galaxy Note 10.1](https://www.samsung.com/de/support/model/GT-N8010ZWADBT/) using [Fully Kiosk Browser](https://www.fully-kiosk.com/#get-kiosk-apps) to control my smart home. Configuration is also exposed to [Apple HomeKit](https://developer.apple.com/documentation/homekit) where Apple HomePod mini is used as a hub to access the smart devices when outside the local network.
+---
+
+As many users on the [Home Assistant subreddit](https://www.reddit.com/r/homeassistant/comments/13xdgg2/wip_building_new_dashboard_from_scratch_w_minimal/) have expressed interest in sharing the configuration, I am happy to provide mine! I will make sure to regularly update it to keep it current.
+
+My [Home Assistant](https://www.home-assistant.io) configuration is based on my home server, which utilizes a 2012 Mac mini running [Proxmox VE 7.4](https://www.proxmox.com/en/proxmox-ve) as the primary operating system for managing Virtual Machines and Linux Containers. Within this setup, Home Assistant is running as a [Home Assistant Container](https://www.home-assistant.io/installation/linux#install-home-assistant-container) within a [Linux Container](https://pve.proxmox.com/wiki/Linux_Container).
+
+For convenient control of my smart home, I primarily use a wall-mounted [Samsung Galaxy Note 10.1](https://www.samsung.com/de/support/model/GT-N8010ZWADBT/) with [Fully Kiosk Browser](https://www.fully-kiosk.com/#get-kiosk-apps). This setup allows me to efficiently manage and monitor my smart devices. Additionally, I have exposed the configuration to [Apple HomeKit](https://developer.apple.com/documentation/homekit), enabling access to the smart devices through an Apple HomePod mini hub even when I'm outside my local network.
 
 ![preview](./www/images/repo/preview.png)
 
 ## Installation
 
-This is the full configuration of my setup. You can use the configuration and adjust it according to your devices and everything should work.
+Below is the complete configuration of my setup. Feel free to use it as a starting point and customize it to fit your devices. By following this configuration, everything should work seamlessly with your setup.
 
 
 ## Integrations
