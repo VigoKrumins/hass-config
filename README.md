@@ -20,6 +20,9 @@ For convenient control of my smart home, I primarily use a wall-mounted [Samsung
 
 Below is the complete configuration of my setup. Feel free to use it as a starting point and customize it to fit your devices. By following this configuration, everything should work seamlessly with your setup.
 
+## Devices
+
+[List of devices](./DEVICES.md)
 
 ## Integrations
 
