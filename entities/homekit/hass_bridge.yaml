@@ -2,7 +2,9 @@ name: HASS Bridge
 filter:
   include_entities:
     # BATHROOM
-    - switch.bathroom_smart_socket
+    - binary_sensor.bathroom_washing_machine
+    - sensor.bathroom_humidity
+    - sensor.bathroom_temperature
 
     # BEDROOM
     - climate.bedroom_thermostat
@@ -20,6 +22,7 @@ filter:
     - light.kids_room_couch_lamp
 
     # KITCHEN
+    - binary_sensor.kitchen_dishwasher
     - climate.kitchen_thermostat
     - light.kitchen_counter_lights
     - switch.kitchen_water_kettle
@@ -31,9 +34,18 @@ filter:
     - light.living_room_standing_lamp
     - light.living_room_led_bar
     - light.living_room_tv_lights
+    - sensor.living_room_air_purifier_pm2_5
 
 entity_config:
   # BATHROOM
+  binary_sensor.bathroom_washing_machine:
+    name: Bathroom Washing Machine
+
+  sensor.bathroom_humidity:
+    name: Bathroom Humidity
+
+  sensor.bathroom_temperature:
+    name: Bathroom Temperature
 
   # BEDROOM
   climate.bedroom_thermostat:
@@ -55,6 +67,9 @@ entity_config:
     name: Kids Room Desk Lamp
 
   # KITCHEN
+  binary_sensor.kitchen_dishwasher:
+    name: Kitchen Dishwasher
+
   climate.kitchen_thermostat:
     name: Kitchen Thermostat
 
@@ -70,3 +85,6 @@ entity_config:
 
   light.living_room_right_desk_lamp:
     name: Living Room Right Desk Lamp
+
+  sensor.living_room_air_purifier_pm2_5:
+    name: Living Room Air Quality
